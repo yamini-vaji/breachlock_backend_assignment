@@ -14,8 +14,8 @@ Before running the application, make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
+   git clone https://github.com/yamini-vaji/breachlock_backend_assignment
+   cd breachlock_backend_assignment
     ```
 
 2. Install the Python dependencies:
@@ -27,16 +27,23 @@ Before running the application, make sure you have the following installed:
     Create a .env.sample file in the root directory of the project and add the following variables:
 
     ```plaintext
-    MONGODB_URI=<mongodb_connection_uri>
     PARKING_LOT_SIZE=<parking_lot_size>
+    MONGODB_URI=<mongodb_connection_uri>
     ```
+    
     NOTE: Replace <mongodb_connection_uri> with the MongoDB connection URI and <parking_lot_size> with the size of the parking lot as required.
-
-4. Start the MongoDB server:
+   
+    Example
+      ```plaintext
+      PARKING_LOT_SIZE="5"
+      MONGODB_URI="mongodb://localhost:27017"
+      ```
+    
+5. Start the MongoDB server:
 
     Make sure MongoDB is installed and running on your system.
 
-5. Run the FastAPI application:
+6. Run the FastAPI application:
     ```bash
     uvicorn main:app --reload
     ```
